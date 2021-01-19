@@ -24,25 +24,25 @@ public class ChessMatch {
 		}
 		return mat;
 	}
-	
+
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 		Position source = sourcePosition.toPosition();
 		Position target = targetPosition.toPosition();
 		validateSourcePosition(source);
 		Piece capturePiece = makeMove(source, target);
-		return (ChessPiece)capturePiece;
+		return (ChessPiece) capturePiece;
 	}
-	
+
 	private Piece makeMove(Position source, Position target) {
 		Piece p = board.removePiece(source);
 		Piece capturePiece = board.removePiece(target);
 		board.placePiece(p, target);
 		return capturePiece;
 	}
-	
+
 	private void validateSourcePosition(Position postion) {
-		if(!board.thereIsAPiece(postion)) {
-			throw new ChessException("There is no pieceon source postion");
+		if (!board.thereIsAPiece(postion)) {
+			throw new ChessException("There is no piece on source postion.");
 		}
 	}
 
@@ -54,7 +54,7 @@ public class ChessMatch {
 		placeNewPiece('d', 8, new King(board, Color.BLACK));
 		placeNewPiece('a', 8, new Rook(board, Color.BLACK));
 		placeNewPiece('h', 8, new Rook(board, Color.BLACK));
-		
+
 		placeNewPiece('a', 1, new Rook(board, Color.WHITE));
 		placeNewPiece('e', 1, new King(board, Color.WHITE));
 		placeNewPiece('h', 1, new Rook(board, Color.WHITE));
