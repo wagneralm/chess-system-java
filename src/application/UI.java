@@ -1,9 +1,6 @@
 package application;
 
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import chess.ChessMatch;
@@ -41,7 +38,7 @@ public class UI {
 
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
-			String s = sc.nextLine();
+			String s = sc.nextLine().toLowerCase(Locale.ROOT);
 			char collumn = s.charAt(0);
 			int row = Integer.parseInt(s.substring(1));
 			return new ChessPosition(collumn, row);
