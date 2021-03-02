@@ -9,10 +9,12 @@
   <li>Aplicar os conhecimentos aprendidos até o momento no curso para a construção de um projeto em Java.</li>
 </ul>
 <br>
-<p>
+<img src="https://github.com/wagneralm/chess-system-java/blob/main/chess-system.png" min-width="400px" max-width="400px" width="400px" align="right">
+
+<p align="left">
   <strong>Para iniciar o projeto:</strong>
 </p>
-<ol>
+<ol align="left">
   <li> Faça o clone do projeto.</li>
   <li> Entre na pasta que foi criada.</li>
   <li> Acesse o diretório bin.</li>
